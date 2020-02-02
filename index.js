@@ -34,6 +34,12 @@ const readInterface = readline.createInterface({
 });
 
 readInterface.on("line", line => {
+  //Hacky inline exceptions
+  if (line == '"PNPM, INC."') {
+    console.log("PNPM Inc");
+    return;
+  }
+
   if (line[0] == "T") {
     const transaction = line.substr(1);
     const val = Number(transaction) * -1;

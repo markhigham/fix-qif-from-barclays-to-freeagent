@@ -1,6 +1,6 @@
 {
   "name": "fix-qif-from-barclays-to-freeagent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "description": "Read a qif and fix amounts",
   "scripts": {

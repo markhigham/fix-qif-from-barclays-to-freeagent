@@ -28,13 +28,13 @@ if (usageFail) {
 
 const readInterface = readline.createInterface({
   input: fs.createReadStream(filename),
-  //   output: process.stdout,
   console: false
 });
 
 readInterface.on("line", line => {
-  //Hacky inline exceptions
+  //Inline exceptions
   if (line == '"PNPM, INC."') {
+    //because FreeAgent doesn't like the quotes
     console.log("PNPM Inc");
     return;
   }
@@ -43,7 +43,6 @@ readInterface.on("line", line => {
     const transaction = line.substr(1);
     const val = Number(transaction) * -1;
     console.log(`T${val}`);
-    // console.log(`ORIGINAL=${transaction} FIXED=${val}`);
     return;
   }
   console.log(line);

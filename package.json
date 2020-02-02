@@ -17,9 +17,17 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "husky": "^4.2.1",
+    "nodemon": "^2.0.2",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "dependencies": {
     "minimist": "^1.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

@@ -1,14 +1,20 @@
 {
   "name": "fix-qif-from-barclays-to-freeagent",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "main": "index.js",
   "description": "Read a qif and fix amounts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "nodemon"
   },
+  "bin": {
+    "fix-qif-from-barclays-to-freeagent": "index.js"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Mark Higham",
+  "repository": {
+    "url": ""
+  },
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.2"

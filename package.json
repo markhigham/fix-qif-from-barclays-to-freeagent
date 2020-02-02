@@ -1,0 +1,19 @@
+{
+  "name": "fix-qif-from-barclays-to-freeagent",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "Read a qif and fix amounts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}

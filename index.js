@@ -37,7 +37,7 @@ readInterface.on("line", line => {
   if (line[0] == "T") {
     const transaction = line.substr(1);
     const val = Number(transaction) * -1;
-    console.log(val);
+    console.log(`T${val}`);
     // console.log(`ORIGINAL=${transaction} FIXED=${val}`);
     return;
   }

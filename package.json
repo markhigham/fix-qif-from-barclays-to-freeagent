@@ -10,7 +10,9 @@
   "bin": {
     "fix-qif-from-barclays-to-freeagent": "index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "FreeAgent"
+  ],
   "author": "Mark Higham",
   "repository": {
     "url": "https://github.com/markhigham/fix-qif-from-barclays-to-freeagent"

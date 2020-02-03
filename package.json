@@ -4,8 +4,9 @@
   "main": "index.js",
   "description": "Read a qif and fix amounts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon"
+    "test": "mocha",
+    "debug": "nodemon",
+    "watch": "mocha -w --watch-files test/**/*.js --watch-files lib/**/*.js"
   },
   "bin": {
     "fix-qif-from-barclays-to-freeagent": "index.js"
@@ -19,7 +20,9 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.2.0",
     "husky": "^4.2.1",
+    "mocha": "^7.0.1",
     "nodemon": "^2.0.2",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1"

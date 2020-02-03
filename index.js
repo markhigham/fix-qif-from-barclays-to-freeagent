@@ -4,6 +4,8 @@ const fs = require("fs");
 const readline = require("readline");
 const argv = require("minimist")(process.argv.slice(2));
 
+const QifProcessor = require("./lib/qif-processor");
+
 const app = process.argv[0];
 
 const USAGE = `
@@ -26,24 +28,14 @@ if (usageFail) {
   process.exit(-1);
 }
 
+const qif = new QifProcessor();
+
 const readInterface = readline.createInterface({
   input: fs.createReadStream(filename),
   console: false
 });
 
 readInterface.on("line", line => {
-  //Inline exceptions
-  if (line == '"PNPM, INC."') {
-    //because FreeAgent doesn't like the quotes
-    console.log("PNPM Inc");
-    return;
-  }
-
-  if (line[0] == "T") {
-    const transaction = line.substr(1);
-    const val = Number(transaction) * -1;
-    console.log(`T${val}`);
-    return;
-  }
-  console.log(line);
+  const output = qif.processLine(line);
+  console.log(output);
 });

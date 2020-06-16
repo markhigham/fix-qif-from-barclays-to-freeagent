@@ -28,7 +28,7 @@
     "pretty-quick": "^2.0.1"
   },
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.5"
   },
   "husky": {
     "hooks": {
